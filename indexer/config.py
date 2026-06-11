@@ -144,6 +144,29 @@ REPOS: list[CodeRepo] = [
         "collection_name": "ottu_docusaurus_openapi_docs",
         "priority": 3,
     },
+    {
+        "name": "connect_frontend",
+        "path": f"{OTTU_WORKSPACE}/connect_frontend",
+        "description": (
+            "Redesigned back-office MFE replacing core_frontend (Vite 7, "
+            "Vue 3.5, Vuetify 3.12, Pinia 3, vue-i18n 11, TS 5.9). Mounts "
+            "via single-spa under /connect/* routes."
+        ),
+        "collection_name": "ottu_connect_frontend",
+        "priority": 10,
+    },
+    {
+        "name": "nav_v3",
+        "path": f"{OTTU_WORKSPACE}/nav_v3",
+        "description": (
+            "Redesigned navigation MFE replacing the legacy `navigation` "
+            "repo (Vite 7, Vue 3.5, Vuetify 3.12, Pinia 3, vue-i18n 11, "
+            "TS 5.9). Owns the chrome on /connect/* routes (strangler-fig "
+            "migration). NOT related to navigation_v2 (payout-only)."
+        ),
+        "collection_name": "ottu_nav_v3",
+        "priority": 10,
+    },
 ]
 
 DOCS_SITES: list[DocsSite] = [
